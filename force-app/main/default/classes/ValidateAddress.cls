@@ -14,13 +14,14 @@ public class ValidateAddress {
         Boolean checkName =street.contains(house);
         System.debug(checkName);
         Boolean checkIso = street.contains(stateIso);
+        System.debug(checkIso);
         System.debug(stateIso.toUpperCase());
         System.debug(countryIso.toUpperCase());
         System.debug(country.toUpperCase());
         System.debug(city.toLowerCase());
         System.debug(state.toLowerCase());
 
-        String fullAdress= house + ' '+  hno +  ' '+ street + ' ' + city + ' ' + state + ' ' + country;
+        String fullAdress= house + ' '+  hno +  ' numara '+ street + ' ' + city + ' ' + state + ' ' + country;
         System.debug(fullAdress);
 
 
