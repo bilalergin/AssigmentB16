@@ -1,0 +1,1 @@
+Planets earth = new Planets('mars ',4,2);
