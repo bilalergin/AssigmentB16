@@ -1,0 +1,11 @@
+map<string,Decimal> subjectAndMarks = new map<string,decimal>{'math'=>75.5, 'physics'=>56.0, 'english'=>80.5, 'chemistry'=>70.0, 'computer'=>58.5};
+StudentDemo student1= new StudentDemo('1001','peter parker',subjectAndMarks);
+system.debug(student1.getAdmissionNo());
+system.debug(student1.getAverageMarks());
+system.debug(student1.getMarks());
+system.debug(student1.getMarks('english'));
+system.debug(student1.getStudentName());
+system.debug(student1.getSubjects());
+system.debug(student1.getSubjectAndMarksAboveAverage());
+system.debug(student1.getTotalMarks());
+system.debug('Above average subject and marks '+student1.getSubjectAndMarksAboveAverage());
