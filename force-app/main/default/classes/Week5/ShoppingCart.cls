@@ -8,10 +8,11 @@ public class ShoppingCart {
     }
     public ShoppingCart(String name){
         this.name = name;
-        System.debug('Hello' + this.name + ', we are glad you are here, what would you like to shop today?');
+        System.debug('Hello ' + this.name + ', we are glad you are here, what would you like to shop today?');
     }
     public void setName(string name) {
         this.name = name;
+        System.debug('Name is ' + name);
     }
     public string getName() {
         return this.name;
@@ -21,10 +22,10 @@ public class ShoppingCart {
         shopItems.put(itemName, 0.0);
         
     }
-    public void addItem(String itemName, Decimal price) {
+    public void addItems(String itemName, Decimal price) {
         shopItems.put(itemName, price);
     }
-    public void addItem(map<string, decimal> itemsPrice) {
+    public void addItems(map<string, decimal> itemsPrice) {
         shopItems.putAll(itemsPrice);
         
     }
@@ -53,7 +54,7 @@ public class ShoppingCart {
     public void printSummary() {
         System.debug('You have added ' + shopItems.size()+ ' items in your cart. Each items and its prices are below' );
         for (string singleItem : shopItems.keySet()){
-            System.debug('Item name '+singleItem+ 'its prices is '+shopItems.get(singleItem));
+            System.debug('Item name '+singleItem+ ' its prices is '+shopItems.get(singleItem));
             
         }
         System.debug('Total value of cart is ' + getTotalAmount());
