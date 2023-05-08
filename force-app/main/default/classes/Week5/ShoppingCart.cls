@@ -43,7 +43,7 @@ public class ShoppingCart {
         return shopItems;
     }
     public Decimal getTotalAmount(){
-        totalAmount= 0;
+       decimal totalAmount= 0;
         for (decimal eachAmount : shopItems.values()) {
             totalAmount += eachAmount;
         }

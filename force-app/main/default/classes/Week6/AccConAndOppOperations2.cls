@@ -53,9 +53,24 @@ public  class AccConAndOppOperations2 {
             account acc = [select name from account where id = :accountId];
             con1 = new contact();
             con1.lastname = acc.name;
-            con1.accountId = acc.Id;
+            con1.accountId = accountId;
+    
             insert con1;
         }
         return con1;
     }
+    //2. Yol
+    public static void createContactForAccount(Id accountId) {
+        // Query the account to get its name
+        Account acc = [SELECT Name FROM Account WHERE Id = :accountId];
+    
+        // Create a new contact with the same last name as the account
+        Contact newContact = new Contact();
+        newContact.LastName = acc.Name;
+        newContact.AccountId = accountId;
+    
+        // Insert the new contact
+        insert newContact;
+    }
+    
 }
