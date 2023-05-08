@@ -1,0 +1,5 @@
+SELECT Id, Subject, Status, Priority, OwnerId FROM Case
+
+SELECT Id, AccountId, FirstName, LastName, Email FROM Contact
+
+SELECT Id, AccountId, FirstName, LastName, Email FROM Contact where AccountId =null
