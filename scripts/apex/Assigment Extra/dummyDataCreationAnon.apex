@@ -4,3 +4,4 @@ DummyDataCreation.addContact();
 DummyDataCreation.deleteOpp();
 DummyDataCreation.createAcc(5);
 DummyDataCreation.createCon(5, DummyDataCreation.createAcc(2));
+DummyDataCreation.createCase(DummyDataCreation.createCon(5, DummyDataCreation.createAcc(2)));

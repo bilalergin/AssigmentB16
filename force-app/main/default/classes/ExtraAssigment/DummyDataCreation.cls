@@ -108,4 +108,28 @@ public static list<contact> createCon(integer n, List<Account> accounts) {
     return contactA;
 }
 
+/*
+7. Write a logic to create CASE for each contact (pass list of contact in parameter)
+populate fields - contact, account, subject, status, case origin.
+Example - parameter - (listcontact). Method created case for each contact, and return all the
+cases.
+a. Call this method from anonymous file, pass the list of contacts returned from (2.a)
+*/
+public static List<Case> createCase(List<Contact> contactA ) {
+    List<Case> listOfCase = new List<Case>();
+    for (contact con : contactA) {
+        case cas = new case();
+        cas.contactid = con.id;
+        cas.accountid = con.accountId;
+        cas.subject = 'Subject 1';
+        cas.status = 'New';
+        cas.origin = 'Web';
+        listOfCase.add(cas);
+        
+    }
+    insert listOfCase;
+    return listOfCase;
+    
+}
+
 }
