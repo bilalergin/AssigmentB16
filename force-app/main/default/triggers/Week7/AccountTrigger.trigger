@@ -2,6 +2,17 @@ trigger AccountTrigger on Account (before insert, before update, after insert, a
    
    if (trigger.isBefore && trigger.isUpdate) {
       AccountTriggerHandler.updateAccountRating(trigger.new, trigger.old, trigger.newMap, trigger.oldMap);
+      AccountTriggerHandler.checkRevenue(trigger.new, trigger.old, trigger.newMap, trigger.oldMap);
+      
+   }
+   if (trigger.isInsert && trigger.isAfter) {
+      AccountTriggerHandler.createContactList(trigger.new, trigger.old, trigger.newMap, trigger.oldMap);
+
+      
+   }
+   if (trigger.isUpdate && trigger.isAfter) {
+      AccountTriggerHandler.checkOpp(trigger.new, trigger.old, trigger.newMap, trigger.oldMap);
+
       
    }
    
