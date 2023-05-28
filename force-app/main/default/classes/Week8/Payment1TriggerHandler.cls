@@ -50,7 +50,7 @@ public static void updateMetot(List<Payment1__c> newTrigger, Map<Id,Payment1__c>
 public static void deleteMetot(List<Payment1__c> oldTrigger) {
     Set<id> customerId = new Set<id>();
         for (Payment1__c p : oldTrigger) {
-        if (p.Customer1__c != null) {
+        if (p.Customer1__c != null && p.Amount__c != null) {
             customerId.add(p.Customer1__c);
             }
         }

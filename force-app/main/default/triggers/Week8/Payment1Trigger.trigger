@@ -8,7 +8,7 @@ trigger Payment1Trigger on Payment1__c (before insert, before update, before del
             Payment1TriggerHandler.updateMetot(Trigger.new, Trigger.oldMap);
             
         }
-        if (trigger.isDelete) {
+        if (Trigger.isDelete) {
             Payment1TriggerHandler.deleteMetot(trigger.old);
           }
         

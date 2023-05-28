@@ -1,6 +1,10 @@
 trigger CaseTrigger on Case (before insert, after insert, before update, after update) {
 
-        
+         //! burası 9.Assigment 28.05.2023
+         if (Trigger.isAfter && trigger.isInsert) {
+                CaseHandler.createCase(trigger.new);
+         }      
+        //! üst 9. hafta assigment
         
         
         /*

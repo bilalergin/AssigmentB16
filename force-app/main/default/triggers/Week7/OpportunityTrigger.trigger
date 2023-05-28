@@ -1,4 +1,15 @@
 trigger OpportunityTrigger on Opportunity (before insert, after insert, before update, after update) {
+
+    if (Trigger.isAfter && Trigger.isInsert) {
+        OpportunityTriggerHandler.insertOpp(Trigger.new);
+        
+    }
+    if (Trigger.isBefore ){
+        if (trigger.isInsert && Trigger.isUpdate) {
+            OpportunityTriggerHandler.updateTargetOppName(trigger.new);
+            
+        }
+    }
     /*
     5. When an opportunity is created show a debug message ([OpportunityName] –
 [CloseDate] – [Amount]) for each opportunity and print the total number of

@@ -1,0 +1,1 @@
+delete  [Select name from payment1__c limit 2000];

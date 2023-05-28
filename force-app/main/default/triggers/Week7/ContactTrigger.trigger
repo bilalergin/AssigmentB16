@@ -1,5 +1,13 @@
 trigger ContactTrigger on Contact (before insert, after insert, before update, after update) {
+    //! 9.Haftanın assigmentı
+    if (Trigger.isAfter && Trigger.isUpdate) {
+        ContactTriggerHandler.updateContact(Trigger.new, Trigger.oldMap);
+        
+    }
+    
+    
     /*
+    //! 8.Haftanın assigmentı
     4. Whenever Contact is created with ‘Account’ then print ‘[Contact Name] contact created
 WITH Account’. If contact is created without ‘Account’ then print ‘[Contact Name]
 contact create WITHOUT Account’
